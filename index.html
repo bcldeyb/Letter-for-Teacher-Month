@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Teacher's Month! 💜</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-screen" id="envelopeScreen">
+            <div class="pixel-character">
+                <div class="character-face">👾</div>
+                <div class="envelope-icon">💌</div>
+            </div>
+
+            <div class="click-text">CLICK TO OPEN</div>
+
+            <div class="pixel-border">
+            </div>
+
+            <p class="envelope-note">
+                Special letter for my Teacher! 💜
+            </p>
+        </div>
+
+        <div class="letter-screen" id="letterScreen">
+            <div class="card">
+                <div class="pixel-letter-header">
+                    <div class="letter-line">💜 HAPPY TEACHER'S MONTH 💜</div>
+                </div>
+
+                <div class="pixel-border-top">
+                </div>
+
+
+                <img src="f7bd6f0a-4f19-4fa4-b651-86fc20ab7bf3.jpeg" alt="Our Teacher" class="photo">
+
+                <div class="message-box">
+                    <p class="message">
+                      
+        Happy Teacher's Month! 💜<br><br>
+        Dear Ma'am Mari,<br><br>
+        Thank you so much for being such an amazing ITE teacher. Thank you for your endless patience, your warm guidance, and for making our lessons in ITE clear, meaningful, and inspiring. You don't just teach us subjects you teach us to believe in ourselves, to aim higher, and to grow into better students and better people.<br><br>
+        I truly appreciate every effort and care you give to us. May you be blessed with good health, boundless joy, and all the love and gratitude you deserve. Thank you for everything, Ma'am! ✨
+                     
+                    </p>
+                    <p class="message">
+                        May you be blessed today and always. You deserve all the love and appreciation! ✨
+                    </p>
+                    <p class="signature">
+                        — From your students Dave 💐
+                    </p>
+                </div>
+
+                <div class="pixel-border-bottom">
+                </div>
+
+                <div class="pixel-footer">
+                    💜 ✨ 💜 ✨ 💜
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="clickSound" preload="auto">
+        <source src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3" type="audio/mpeg">
+    
+
+    <audio id="bgSong" preload="auto" loop>
+        <source src="Flawed Mangoes - The Beginning.mp3" type="audio/mpeg">
+    
+
+    <script>
+        const envelope = document.getElementById("envelopeScreen");
+        const letter = document.getElementById("letterScreen");
+        const clickSound = document.getElementById("clickSound");
+        const bgSong = document.getElementById("bgSong");
+
+        envelope.addEventListener("click", function () {
+            clickSound.currentTime = 0;
+            clickSound.play().catch(err => console.log(err));
+
+            bgSong.currentTime = 0;
+            bgSong.volume = 0.5;
+            bgSong.play().catch(err => console.log(err));
+
+            envelope.style.display = "none";
+            letter.style.display = "block";
+        });
+    </script>
+</body>
+</html>

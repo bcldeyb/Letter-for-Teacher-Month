@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a2e;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.container {
+    width: 100%;
+    max-width: 550px;
+}
+
+@keyframes softGlow {
+    0%, 100% {
+        box-shadow: 0 0 0 4px #5b21b6, 8px 8px 0 #5b21b6, inset 0 0 20px rgba(157, 78, 221, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 0 4px #5b21b6, 8px 8px 0 #5b21b6, inset 0 0 35px rgba(157, 78, 221, 0.6);
+    }
+}
+
+.envelope-screen {
+    background: #16213e;
+    border: 8px solid #9d4edd;
+    box-shadow:
+        0 0 0 4px #5b21b6,
+        8px 8px 0 #5b21b6,
+        inset 0 0 20px rgba(157, 78, 221, 0.3);
+    padding: 40px 20px;
+    text-align: center;
+    cursor: pointer;
+    animation: softGlow 2s ease-in-out infinite;
+    transition: transform 0.2s ease;
+}
+
+.envelope-screen:hover {
+    transform: translate(-4px, -4px);
+    box-shadow:
+        0 0 0 4px #5b21b6,
+        12px 12px 0 #5b21b6,
+        inset 0 0 30px rgba(157, 78, 221, 0.5);
+}
+
+.pixel-character {
+    margin-bottom: 25px;
+}
+
+.character-face {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.envelope-icon {
+    font-size: 40px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.click-text {
+    color: #c084fc;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 0 #5b21b6, 0 0 10px rgba(192, 132, 252, 0.8);
+}
+
+.pixel-border {
+    color: #9d4edd;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    text-shadow: 0 0 8px rgba(157, 78, 221, 0.8);
+}
+
+.envelope-note {
+    color: #e9d5ff;
+    font-size: 9px;
+    line-height: 2.2;
+}
+
+.letter-screen {
+    display: none;
+}
+
+.card {
+    background: #16213e;
+    border: 8px solid #9d4edd;
+    box-shadow:
+        0 0 0 4px #5b21b6,
+        8px 8px 0 #5b21b6,
+        inset 0 0 20px rgba(157, 78, 221, 0.3);
+    padding: 25px 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow:
+        0 0 0 4px #5b21b6,
+        12px 12px 0 #5b21b6,
+        inset 0 0 30px rgba(157, 78, 221, 0.5);
+}
+
+.pixel-letter-header {
+    background: #7c3aed;
+    color: #faf5ff;
+    padding: 12px;
+    border: 4px solid #5b21b6;
+    box-shadow: inset -3px -3px 0 #a78bfa;
+    margin-bottom: 18px;
+}
+
+.letter-line {
+    font-size: 11px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-shadow: 2px 2px 0 #5b21b6;
+}
+
+.pixel-border-top,
+.pixel-border-bottom {
+    color: #9d4edd;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    text-shadow: 0 0 6px rgba(157, 78, 221, 0.6);
+}
+
+.pixel-border-bottom {
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+.inside-pictures {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.inside-pic {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border: 4px solid #8b5cf6;
+    box-shadow: 3px 3px 0 #5b21b6;
+}
+
+@keyframes photoGlow {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.1); }
+}
+
+.photo {
+    width: 85%;
+    height: 260px;
+    margin: 0 auto 20px;
+    display: block;
+    object-fit: cover;
+    border: 6px solid #8b5cf6;
+    box-shadow: 4px 4px 0 #5b21b6;
+    animation: photoGlow 3s ease-in-out infinite;
+}
+
+.message-box {
+    background: #1f2947;
+    border: 4px solid #a78bfa;
+    padding: 18px;
+    box-shadow: inset -3px -3px 0 #7c3aed;
+}
+
+.message {
+    color: #e9d5ff;
+    font-size: 8px;
+    line-height: 2.3;
+    margin-bottom: 12px;
+}
+
+.signature {
+    margin-top: 18px;
+    color: #c084fc;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+@keyframes floatHeart {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+.pixel-footer {
+    font-size: 20px;
+    letter-spacing: 8px;
+    margin-top: 10px;
+    animation: floatHeart 1.5s ease-in-out infinite;
+}
